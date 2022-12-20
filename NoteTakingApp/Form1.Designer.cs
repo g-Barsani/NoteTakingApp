@@ -42,9 +42,9 @@
             this.readButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.messageListLabel = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.notesList = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesList)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -129,6 +129,7 @@
             this.newButton.TabIndex = 3;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // saveButton
             // 
@@ -138,6 +139,7 @@
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // readButton
             // 
@@ -147,6 +149,7 @@
             this.readButton.TabIndex = 3;
             this.readButton.Text = "Read";
             this.readButton.UseVisualStyleBackColor = true;
+            this.readButton.Click += new System.EventHandler(this.readButton_Click);
             // 
             // deleteButton
             // 
@@ -156,6 +159,7 @@
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // messageListLabel
             // 
@@ -166,22 +170,29 @@
             this.messageListLabel.TabIndex = 1;
             this.messageListLabel.Text = "Message List";
             // 
-            // dataGridView1
+            // notesList
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(528, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 228);
-            this.dataGridView1.TabIndex = 4;
+            this.notesList.AllowUserToAddRows = false;
+            this.notesList.AllowUserToDeleteRows = false;
+            this.notesList.AllowUserToOrderColumns = true;
+            this.notesList.AllowUserToResizeColumns = false;
+            this.notesList.AllowUserToResizeRows = false;
+            this.notesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.notesList.ColumnHeadersVisible = false;
+            this.notesList.Location = new System.Drawing.Point(528, 81);
+            this.notesList.Name = "notesList";
+            this.notesList.ReadOnly = true;
+            this.notesList.RowHeadersVisible = false;
+            this.notesList.RowTemplate.Height = 28;
+            this.notesList.Size = new System.Drawing.Size(240, 228);
+            this.notesList.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 409);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.notesList);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.readButton);
             this.Controls.Add(this.saveButton);
@@ -197,7 +208,7 @@
             this.Text = "Main Form by Gabriel B.";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +228,7 @@
         private Button readButton;
         private Button deleteButton;
         private Label messageListLabel;
-        private DataGridView dataGridView1;
+        private DataGridView notesList;
         private ToolStripMenuItem helpMenu;
         private ToolStripMenuItem aboutOption;
     }
