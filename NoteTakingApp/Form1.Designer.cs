@@ -186,6 +186,7 @@
             this.notesList.RowTemplate.Height = 28;
             this.notesList.Size = new System.Drawing.Size(240, 228);
             this.notesList.TabIndex = 4;
+            this.notesList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.notesList_CellDoubleClick);
             // 
             // MainForm
             // 

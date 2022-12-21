@@ -57,14 +57,29 @@ namespace NoteTakingApp
         {
             try
             {
-                int index = notesList.CurrentCell.RowIndex;
-                table.Rows[index].Delete();
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this note?", "Delete note", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int index = notesList.CurrentCell.RowIndex;
+                    table.Rows[index].Delete();
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("There's no note selected to delete.");
+                MessageBox.Show("There's no selected note to delete.");
             }
             
+        }
+
+        private void notesList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = notesList.CurrentCell.RowIndex;
+
+            if (index >= 0)
+            {
+                titleText.Text = table.Rows[index].ItemArray[0].ToString();
+                messageText.Text = table.Rows[index].ItemArray[1].ToString();
+            }
         }
     }
 }
