@@ -49,12 +49,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.helpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(795, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(795, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,14 +63,15 @@
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitOption});
+            this.fileMenu.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(46, 23);
+            this.fileMenu.Size = new System.Drawing.Size(44, 22);
             this.fileMenu.Text = "&File";
             // 
             // exitOption
             // 
             this.exitOption.Name = "exitOption";
-            this.exitOption.Size = new System.Drawing.Size(106, 24);
+            this.exitOption.Size = new System.Drawing.Size(103, 22);
             this.exitOption.Text = "E&xit";
             this.exitOption.Click += new System.EventHandler(this.exitOption_Click);
             // 
@@ -77,28 +79,33 @@
             // 
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutOption});
+            this.helpMenu.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(51, 23);
+            this.helpMenu.Size = new System.Drawing.Size(52, 22);
             this.helpMenu.Text = "&Help";
             // 
             // aboutOption
             // 
             this.aboutOption.Name = "aboutOption";
-            this.aboutOption.Size = new System.Drawing.Size(116, 24);
+            this.aboutOption.Size = new System.Drawing.Size(120, 22);
             this.aboutOption.Text = "&About";
             this.aboutOption.Click += new System.EventHandler(this.aboutOption_Click);
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titleLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.titleLabel.Location = new System.Drawing.Point(94, 37);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(46, 19);
+            this.titleLabel.Size = new System.Drawing.Size(49, 18);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Title:";
             // 
             // titleText
             // 
+            this.titleText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.titleText.Location = new System.Drawing.Point(154, 34);
             this.titleText.Name = "titleText";
             this.titleText.Size = new System.Drawing.Size(180, 26);
@@ -107,14 +114,19 @@
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.Location = new System.Drawing.Point(71, 81);
+            this.messageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.messageLabel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.messageLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.messageLabel.Location = new System.Drawing.Point(57, 84);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(69, 19);
+            this.messageLabel.Size = new System.Drawing.Size(86, 18);
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "Message:";
+            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
             // messageText
             // 
+            this.messageText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.messageText.Location = new System.Drawing.Point(154, 81);
             this.messageText.Multiline = true;
             this.messageText.Name = "messageText";
@@ -123,50 +135,61 @@
             // 
             // newButton
             // 
+            this.newButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.newButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newButton.Location = new System.Drawing.Point(154, 346);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(93, 30);
             this.newButton.TabIndex = 3;
             this.newButton.Text = "New";
-            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.saveButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.saveButton.Location = new System.Drawing.Point(414, 346);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(93, 30);
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // readButton
             // 
+            this.readButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.readButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.readButton.Location = new System.Drawing.Point(590, 346);
             this.readButton.Name = "readButton";
             this.readButton.Size = new System.Drawing.Size(86, 30);
             this.readButton.TabIndex = 3;
             this.readButton.Text = "Read";
-            this.readButton.UseVisualStyleBackColor = true;
+            this.readButton.UseVisualStyleBackColor = false;
             this.readButton.Click += new System.EventHandler(this.readButton_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.deleteButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deleteButton.Location = new System.Drawing.Point(682, 346);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(86, 30);
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // messageListLabel
             // 
             this.messageListLabel.AutoSize = true;
+            this.messageListLabel.BackColor = System.Drawing.Color.Transparent;
+            this.messageListLabel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.messageListLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.messageListLabel.Location = new System.Drawing.Point(528, 59);
             this.messageListLabel.Name = "messageListLabel";
-            this.messageListLabel.Size = new System.Drawing.Size(95, 19);
+            this.messageListLabel.Size = new System.Drawing.Size(115, 18);
             this.messageListLabel.TabIndex = 1;
             this.messageListLabel.Text = "Message List";
             // 
@@ -192,6 +215,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::NoteTakingApp.Properties.Resources.starry_sky;
             this.ClientSize = new System.Drawing.Size(795, 409);
             this.Controls.Add(this.notesList);
             this.Controls.Add(this.deleteButton);
@@ -204,6 +229,7 @@
             this.Controls.Add(this.messageListLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Main Form by Gabriel B.";

@@ -81,5 +81,10 @@ namespace NoteTakingApp
                 messageText.Text = table.Rows[index].ItemArray[1].ToString();
             }
         }
+
+        private void messageLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
