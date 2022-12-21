@@ -18,7 +18,6 @@ namespace NoteTakingApp
 
             notesList.Columns["Messages"].Visible = false;
             notesList.Columns["Title"].Width = notesList.Width;
-
         }
 
         private void exitOption_Click(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace NoteTakingApp
 
         private void aboutOption_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Created by Gabriel Barsani");
+            MessageBox.Show("Created by Gabriel Barsani.");
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -56,8 +55,16 @@ namespace NoteTakingApp
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            int index = notesList.CurrentCell.RowIndex;
-            table.Rows[index].Delete();
+            try
+            {
+                int index = notesList.CurrentCell.RowIndex;
+                table.Rows[index].Delete();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There's no note selected to delete.");
+            }
+            
         }
     }
 }
